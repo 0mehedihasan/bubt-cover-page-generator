@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northern University of Business & Technology Khulna Cover Page Generator</title>
+    <link rel="icon" href="image/cpg.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W27RK1M2VR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W27RK1M2VR');
+    </script>
+
+</head>
+<body>
+    <h1>NUBTK Cover Page Generator</h1>
+    <div class="container">
+        <div class="input-section">
+            <h2>Input Details</h2>
+            <label for="logoSelect">Select Logos(Optional):</label>
+            <select id="logoSelect">
+                <option value="image/Nubtklogo1xx.png" data-width="250" data-height="250">NUBTK Logo: 1</option>
+                <option value="image/Nubtklogo2xx.png" data-width="500" data-height="200">NUBTK Logo: 2</option>
+                <option value="image/Nubtklogo3xx.png" data-width="500" data-height="200">NUBTK Logo: 3</option>
+                <option value="image/Nubtklogo4xx.png" data-width="250" data-height="250">NUBTK Logo: 4</option>
+                <option value="image/Nubtklogo5xx.png" data-width="550" data-height="300">NUBTK Logo: 5</option>
+                <option value="image/Nubtklogo6xx.png" data-width="550" data-height="300">NUBTK Logo: 6</option>
+                <option value="image/Nubtklogo7xx.png" data-width="550" data-height="300">NUBTK Logo: 7</option>
+                <option value="image/Nubtklogo8xx.png" data-width="550" data-height="300">NUBTK Logo: 8</option>
+            </select>
+            <label for="coverpagename">Cover page name(Optional):</label>
+            <input type="text" id="coverpagename" class="demo-input" placeholder="Enter a cover page name" data-demo="Database Cover Page" list="coverpagenameList">
+            <datalist id="coverpagenameList"></datalist>
+        
+            <label for="department">Department of:</label>
+            <select id="department">
+                <option value="">Select a Department</option>
+                <option value="computer_science">Computer Science and Engineering</option>
+                <option value="civil_engineering">Civil Engineering</option>
+                <option value="electrical_engineering">Electrical and Electronic Engineering</option>
+                <option value="architecture">Architecture</option>
+                <option value="business_administration">Business Administration</option>
+                <option value="economics">Economics</option>
+                <option value="bangla">Bangla</option>
+                <option value="english">English</option>
+                <option value="journalism">Journalism and Mass Communication</option>
+                <option value="law">Law</option>
+            </select>
+        
+            <label for="courseTitle">Course Title:</label>
+            <input type="text" id="courseTitle" class="demo-input" placeholder="Enter a course title." data-demo="Database Management System" list="courseTitleList">
+            <datalist id="courseTitleList"></datalist>
+        
+            <label for="courseCode">Course Code:</label>
+            <input type="text" id="courseCode" class="demo-input" placeholder="Enter the course code." data-demo="CSE 3101" list="courseCodeList">
+            <datalist id="courseCodeList">
+                <option value="CSE ">
+                <option value="MATH ">
+                <option value="PHY ">
+                <option value="IPE ">
+                <option value="ENG ">
+                <option value="HUM ">
+                <option value="GED ">
+            </datalist>
+        
+            <label for="coverType">Type of Cover Page:</label>
+            <input type="text" id="coverType" class="demo-input" placeholder="Enter the cover page type." data-demo="ASSIGNMENT" list="coverTypeList">
+            <datalist id="coverTypeList">
+                <option value="ASSIGNMENT ">
+                <option value="LAB ">
+                <option value="LAB BOOK ">
+                <option value="PROJECT ">
+                <option value="PRESENTATION ">
+            </datalist>
+        
+            <label for="titleName">Title:</label>
+            <input type="text" id="titleName" class="demo-input" placeholder="Enter the course title." data-demo="Creating a Student Cover Page Database Using SQL (Standard Query Language)" list="titleNameList">
+            <datalist id="titleNameList"></datalist>
+        
+            <label for="teacherName">Teacher's Name:</label>
+            <input type="text" id="teacherName" class="demo-input" placeholder="Enter the course teacher's name." data-demo="Kazi Asif Ahmed" list="teacherNameList">
+            <datalist id="teacherNameList">
+                <!-- <option value="Dr. Anwarul Haque Joarder">Dr. Anwarul Haque Joarder (Dean on leave)</option> -->
+                <option value="Md. Rabiul Islam">Md. Rabiul Islam (Dean)</option>
+                <option value="Md. Riaz Mahmud">Md. Riaz Mahmud (Department Head)</option>
+                <option value="Md. Deloar Hossain">Md. Deloar Hossain (Senior Lecturer)</option>
+                <option value="Ferdib-Al-Islam">Ferdib-Al-Islam (Senior Lecturer)</option>
+                <option value="Md. Tahmid Hasan">Md. Tahmid Hasan (Lecturer)</option>
+                <option value="Md. Nazim Uddin">Md. Nazim Uddin (Lecturer)</option>
+                <option value="Partha Protim Gharami">Partha Protim Gharami (Lecturer)</option>
+                <option value="Md. Apu Hosen">Md. Apu Hosen (Lecturer)</option>
+                <option value="Nazmus Sakib">Nazmus Sakib (Lecturer)</option>
+                <option value="Md. Azizul Islam">Md. Azizul Islam (Lecturer)</option>
+                <option value="Kazi Asif Ahmed">Kazi Asif Ahmed (Lecturer)</option>
+                <option value="Md. Hasibul Islam">Md. Hasibul Islam (Lecturer)</option>
+                <option value="Arjan Ghosh">Arjan Ghosh (Lecturer)</option>
+                <option value="Shahadat Hoshen Moz">Shahadat Hoshen Moz (Lecturer)</option>
+                <option value="Md. Mahamudul Hasan Khalid">Md. Mahamudul Hasan Khalid (Lecturer)</option>
+                <option value="Md. Toufiqul Islam">Md. Toufiqul Islam (Lecturer)</option>
+                <option value="Md. Shamim Parvej">Md. Shamim Parvej (Lecturer)</option>
+                <option value="Nuzhat Tabassum">Nuzhat Tabassum (Lecturer)</option>
+                <option value="Md. Azizul Haque">Md. Azizul Haque (Lecturer)</option>
+                <option value="Md. Abid Afsan Hamid">Md. Abid Afsan Hamid (Lecturer)</option>
+                <option value="Vashkar Kar">Vashkar Kar (Lecturer)</option>
+                <option value="Mahbub-E-Elahi">Mahbub-E-Elahi (Lecturer)</option>
+                <option value="G.M. Mamun Al Imran">G.M. Mamun Al Imran (Lecturer)</option>
+                <option value="Tahera Parvin">Tahera Parvin (Lecturer)</option>
+                <option value="Md. Mossadek Touhid">Md. Mossadek Touhid (Lecturer)</option>
+                <option value="Mahadi Hasan">Mahadi Hasan (Lecturer)</option>
+                <option value="Md. Anarul Islam">Md. Anarul Islam (Lecturer)</option>
+                <option value="Talha Al Junaid">Talha Al Junaid (Lecturer)</option>
+                <option value="Rashik Reza Fahim">Rashik Reza Fahim (Lecturer)</option>
+                <option value="Pulak Kundu">Pulak Kundu (lecturer)</option>
+                <option value="Mst. Farjana Alam">Mst. Farjana Alam (lecturer)</option>
+            </datalist>
+              
+        
+            <label for="teacherDesignation">Teacher's Designation:</label>
+            <select id="teacherDesignation">
+                <option value="">Select a Teacher Designation</option>
+                <option value="Lecturer">Lecturer</option>
+                <option value="Senior Lecturer">Senior Lecturer</option>
+                <option value="Assistant Professor">Assistant Professor</option>
+                <option value="Associate Professor">Associate Professor</option>
+                <option value="Professor">Professor</option>
+                <option value="Distinguished Professor">Distinguished Professor</option>
+                <option value="Emeritus Professor">Emeritus Professor</option>
+                <option value="Adjunct Professor">Adjunct Professor</option>
+                <option value="Visiting Professor">Visiting Professor</option>
+                <option value="Research Professor">Research Professor</option>
+                <option value="Teaching Assistant">Teaching Assistant</option>
+                <option value="Instructor">Instructor</option>
+                <option value="Postdoctoral Researcher">Postdoctoral Researcher</option>
+                <option value="Department Head">Department Head</option>
+                <option value="Dean">Dean</option>
+            </select>
+
+            <label for="teacherDepartment">Teacher's Department(Optional):</label>
+            <select id="teacherDepartment">
+                <option value="">Select a Department</option>
+                <option value="computer_science">Computer Science and Engineering</option>
+                <option value="civil_engineering">Civil Engineering</option>
+                <option value="electrical_engineering">Electrical and Electronic Engineering</option>
+                <option value="architecture">Architecture</option>
+                <option value="business_administration">Business Administration</option>
+                <option value="economics">Economics</option>
+                <option value="bangla">Bangla</option>
+                <option value="english">English</option>
+                <option value="journalism">Journalism and Mass Communication</option>
+                <option value="law">Law</option>
+            </select>
+
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" class="demo-input" placeholder="Enter the student's name." data-demo="Rahul Kumar Ghosh" list="studentNameList">
+            <datalist id="studentNameList"></datalist>
+        
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" class="demo-input" placeholder="Enter the student's ID." data-demo="11220120819" list="studentIdList">
+            <datalist id="studentIdList"></datalist>
+        
+            <label for="section">Semester and Section:</label>
+            <input type="text" id="section" class="demo-input" placeholder="Enter the student's semester and section." data-demo="5B" list="sectionList">
+            <datalist id="sectionList"></datalist>
+        
+            <label for="session">Session:</label>
+            <select id="session">
+                <option value="">Select a Session</option>
+                <option value="Spring">Spring</option>
+                <option value="Fall">Fall</option>
+                <option value="Summer">Summer</option>
+            </select>
+        
+            <label for="submissionDate">Date of Submission:</label>
+            <input type="date" id="submissionDate">
+        </div>
+        <div class="output-section">
+            <div class="button-container">
+                <button id="download" class="interactive-button">Download PDF</button>
+                <button id="shareButton" class="interactive-button">Share</button>
+                <button id="userGuideButton" class="interactive-button">User's Guide</button>
+                <button id="scanQRCode" class="interactive-button">Scan QR Code</button>
+            </div>
+            <div id="content">
+                <div id="logoContainer" class="logo-container">
+                </div>            
+                <h1><span style="font-weight: 700;">Northern University of Business & Technology Khulna</span></h1>
+                <h2 id="departmentText"><span style="font-weight: 700;"></span></h2>
+                <p class="course-info">Course Title: <span id="courseTitleText"></span></p>
+                <p class="course-info">Course Code: <span id="courseCodeText"></span></p>
+                <h2 id="coverTypeText"><span style="font-weight: 700;"></span></h2>
+                <p class="center-text">Title: <span id="titleNameText"></span></p>
+                <table class="submission-table">
+                    <tr>
+                        <th>Submitted To</th>
+                        <th>Submitted By</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span id="teacherNameText"></span></p>
+                            <p><span id="teacherDesignationText"></span></p>
+                            <p>Department of <span id="departmentAbbreviationText"></span>, NUBTK.</p>
+                        </td>
+                        <td>
+                            <p>Name: <span id="studentNameText"></span></p>
+                            <p>Student ID: <span id="studentIdText"></span></p>
+                            <p>Section: <span id="sectionText"></span></p>
+                            <p>Session: <span id="sessionText"></span></p>
+                        </td>
+                    </tr>
+                </table>
+                <p class="center-text">Date of Submission: <span id="submissionDateText"></span></p>
+            </div>
+        </div>
+    </div>
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Share Cover Page Data</h2>
+          <div class="share-options">
+            <button id="copyLink" class="share-option">
+              <i class="fas fa-clipboard"></i>
+              <span>Copy Link</span>
+            </button>
+            <button id="shareMail" class="share-option">
+                <i class="fas fa-envelope"></i>
+                <span>Mail</span>
+            </button>
+            <button id="shareMailNubtk" class="share-option">
+                <i class="fas fa-envelope"></i>
+                <span>NUBTK</span>
+            </button>     
+            <button id="generateQRCode" class="share-option">
+                <i class="fas fa-qrcode"></i>
+                <span>Generate QR Code</span>
+            </button>
+            <div id="qrCodeModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>QR Code</h2>
+                  <div id="qrcode"></div>
+                  <button id="downloadQRCode" class="interactive-button">Download QR Code</button>
+                </div>
+            </div>       
+          </div>
+        </div>
+    </div>
+    <div id="readmeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="readmeContent"></div>
+        </div>
+    </div>
+    <div id="qrScannerModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Scan QR Code</h2>
+          <div id="reader"></div>
+          <button id="cancelScan" class="interactive-button">Cancel</button>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+          <p>&copy; 2024 Northern University of Business & Technology Khulna Cover Page Generator</p>
+          <nav class="footer-nav">
+            <a href="https://github.com/QKnot/Cover-Page-Generator.git" target="_blank" rel="noopener noreferrer" class="footer-icon">
+              <i class="fab fa-github" title="Github"></i>
+            </a>
+            <a href="https://qknot.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">Developer</a>
+          </nav>
+        </div>
+    </footer>
+    <div id="notification" class="notification"></div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+</html>
