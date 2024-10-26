@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const height = option.dataset.height || 250; 
             addLogoToContent(option.value, option.text, width, height);
     
-            if (option.value === 'image/Nubtklogo5xx.png' || option.value === 'image/Nubtklogo6xx.png' || option.value === 'image/Nubtklogo7xx.png' || option.value === 'image/Nubtklogo8xx.png') {
+            if (option.value === 'image/BUBT_logo.png') {
                 showHeading = false;
             }
         });
@@ -377,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
         logoContainer.appendChild(logo);
     }
 
-    addLogoToContent('image/Nubtklogo1xx.png', 'NUBTK Logo: 1');
+    addLogoToContent('image/BUBT_logo.png', 'BUBT Logo: 1');
 
     addInputListeners();
     updateContent();
