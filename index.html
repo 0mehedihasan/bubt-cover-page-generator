@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
     <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W27RK1M2VR"></script>
     <script>
@@ -25,7 +26,33 @@
 
 </head>
 <body>
-    <h1>BUBT Cover Page Generator</h1>
+    <header style="background-color: #f8f9fa; padding: 20px; border-bottom: 2px solid #007bff;">
+        <div class="header">
+            <div class="logoh" style="display: flex; align-items: center;">
+                <img src="image/BUBT_logo.png" alt="BUBT Logo" style="width: 100px; height: auto; margin-right: 20px;">
+                <div class="title">
+                    <h1>BUBT Cover Page Generator</h1>
+                </div>
+            </div>
+            <div class="departments" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+                <a href="#" target="_blank" class="dept-button">CSE Dept</a>
+                <a href="#" target="_blank" class="dept-button">EEE Dept</a>
+                <a href="#" target="_blank" class="dept-button">CE Dept</a>
+                <a href="#" target="_blank" class="dept-button">Math & Stats Dept</a>
+                <a href="#" target="_blank" class="dept-button">Law & Justice Dept</a>
+                <a href="#" target="_blank" class="dept-button">English Dept</a>
+                <a href="#" target="_blank" class="dept-button">Economics Dept</a>
+                <a href="#" target="_blank" class="dept-button">Accounting Dept</a>
+                <a href="#" target="_blank" class="dept-button">Marketing Dept</a>
+                <a href="#" target="_blank" class="dept-button">Finance Dept</a>
+                <a href="#" target="_blank" class="dept-button">Management Dept</a>
+                <a href="#" target="_blank" class="dept-button">Textile Eng Dept</a>
+            </div>        
+        </div>
+    </header>
+    <br>
+    <br>
+
     <div class="container">
         <div class="input-section">
             <h2>Input Details</h2>
@@ -262,17 +289,19 @@
           <button id="cancelScan" class="interactive-button">Cancel</button>
         </div>
     </div>
+    <br>
     <footer class="site-footer">
         <div class="footer-content">
-          <p>&copy; 2024 Bangladesh University of Business and Technology (BUBT) Cover Page Generator</p>
-          <nav class="footer-nav">
-            <a href="https://github.com/QKnot/Cover-Page-Generator.git" target="_blank" rel="noopener noreferrer" class="footer-icon">
-              <i class="fab fa-github" title="Github"></i>
-            </a>
-            <a href="https://qknot.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">Developer</a>
-          </nav>
+            <p>&copy; 2024 Bangladesh University of Business and Technology (BUBT) Cover Page Generator</p>
+            <nav class="footer-nav">
+                <a href="https://github.com/0mehedihasan/bubt-cover-page-generator.git" target="_blank" rel="noopener noreferrer" class="footer-icon">
+                    <i class="fab fa-github" title="Github"></i>
+                </a>
+                <a href="https://github.com/0mehedihasan" target="_blank" rel="noopener noreferrer" class="developer-link">Developer</a>
+            </nav>
         </div>
     </footer>
+    
     <div id="notification" class="notification"></div>
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
